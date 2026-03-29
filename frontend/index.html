@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Inteligente MIO Cali</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-bus"></i>
+                    <div>
+                        <span>Sistema Inteligente</span>
+                        <span class="highlight">MIO Cali</span>
+                    </div>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-brain"></i>
+                    Búsqueda A*
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Planifica tu ruta en el MIO</h1>
+                <p>Algoritmo A* con reglas lógicas y heurística de distancia</p>
+                <div class="features">
+                    <div class="feature"><i class="fas fa-route"></i> 30+ estaciones</div>
+                    <div class="feature"><i class="fas fa-exchange-alt"></i> 4 rutas</div>
+                    <div class="feature"><i class="fas fa-chart-line"></i> Optimización A*</div>
+                    <div class="feature"><i class="fas fa-gavel"></i> Reglas lógicas</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Card -->
+        <div class="main-card">
+            <div class="card-header">
+                <i class="fas fa-map-marked-alt"></i>
+                <h2>Planificador de Rutas</h2>
+                <p>Selecciona origen y destino</p>
+            </div>
+
+            <div class="card-body">
+                <form id="route-form">
+                    <div class="form-group">
+                        <label><i class="fas fa-play-circle"></i> Estación de Origen</label>
+                        <div class="select-wrapper">
+                            <select id="origen" required>
+                                <option value="">Selecciona...</option>
+                            </select>
+                            <i class="fas fa-chevron-down select-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-flag-checkered"></i> Estación de Destino</label>
+                        <div class="select-wrapper">
+                            <select id="destino" required>
+                                <option value="">Selecciona...</option>
+                            </select>
+                            <i class="fas fa-chevron-down select-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-clock"></i> Hora (opcional)</label>
+                        <div class="time-slider">
+                            <input type="range" id="hora" min="0" max="23" step="1" value="12">
+                            <span id="hora-value" class="time-badge">12:00</span>
+                        </div>
+                        <small class="hint">Horas pico: 6-9 AM y 5-7 PM (×1.5)</small>
+                    </div>
+
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-search"></i> Calcular Mejor Ruta
+                    </button>
+                </form>
+
+                <div id="loading" style="display: none;" class="loading-indicator">
+                    <div class="spinner"></div>
+                    <p>Calculando ruta óptima...</p>
+                </div>
+
+                <div id="results" style="display: none;" class="results-section">
+                    <div class="results-header">
+                        <i class="fas fa-chart-simple"></i>
+                        <h3>Resultado</h3>
+                    </div>
+                    <div id="route-summary"></div>
+                    <div class="route-details">
+                        <h4><i class="fas fa-road"></i> Ruta Detallada</h4>
+                        <div id="route-steps"></div>
+                    </div>
+                    <div id="algorithm-stats" class="algorithm-stats"></div>
+                    <div class="info-box">
+                        <i class="fas fa-info-circle"></i>
+                        <div>
+                            <strong>¿Cómo funciona?</strong>
+                            <p>Algoritmo A* con heurística euclidiana + reglas: transbordo (+5 min), congestión (×1.5 en horas pico)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rutas -->
+        <section class="info-section">
+            <h2 class="section-title">Rutas Disponibles</h2>
+            <div class="info-grid" id="rutas-grid"></div>
+        </section>
+
+        <footer class="footer">
+            <p>Desarrollado para Sistemas Inteligentes | MIO Cali</p>
+            <p class="small">Algoritmo A* con reglas lógicas</p>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
