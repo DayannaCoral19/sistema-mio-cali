@@ -10,7 +10,7 @@ Sistema inteligente basado en conocimiento que utiliza el algoritmo A* y reglas 
 - **API REST**: Endpoints para consultar estaciones y rutas
 - **Interfaz moderna**: Frontend responsive con visualización de resultados
 
-### 1. Requisitos previos
+### Requisitos previos
 - Python 3.8 o superior
 - Pip (gestor de paquetes)
  
