@@ -10,4 +10,5 @@ Sistema inteligente basado en conocimiento que utiliza el algoritmo A* y reglas 
 - **API REST**: Endpoints para consultar estaciones y rutas
 - **Interfaz moderna**: Frontend responsive con visualización de resultados
 
-## Estructura del Proyecto
+## Como ejecutar
+- 1. Descargar el proyecto de 
