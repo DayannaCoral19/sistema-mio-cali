@@ -20,3 +20,6 @@ Sistema inteligente basado en conocimiento que utiliza el algoritmo A* y reglas 
 3. Instalar dependencias pip install -r requirements.txt
 4. Ejecutar servidor python backend/app.py
 5. Abrir en el navegador http://localhost:5000
+
+## Video 
+-Abrir video https://canva.link/raanqlq27nkdk85
